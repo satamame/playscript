@@ -1,0 +1,2 @@
+# # Editable install from local dev directory (PScript==0.1)
+-e .
