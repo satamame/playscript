@@ -1,27 +1,29 @@
 # playscript
 
-## Overview
+[> English version](https://github.com/satamame/playscript/blob/master/README_en.md)
 
-Package for play script structure in Japanese style.
+## 概要
 
-## Classes
+台本を構造化データとして扱うためのパッケージです。
+
+## クラス
 
 ### PSc
 
-Play script containing lines and meta data.
+台本データのクラスです。
 
 ### PScLine
 
-Each line of lines contained in PSc object.  
-It has an attribute "type" to determine if it's a dialogue or a direction, etc.
+PSc オブジェクトに含まれる各行を表すクラスです。  
+"type" 属性により、セリフやト書きといった「行の種類」が決まります。
 
 ### PScLineType
 
-This enum defines types for PScLine.
+PScLine の "type" を定義する enum 型です。
 
-## Example
+## 例
 
-### Creating a 3-line script
+### 3行からなる台本を作る
 
 ```python
 from playscript import PScLineType, PScLine, PSc

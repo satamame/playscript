@@ -1,6 +1,8 @@
 __pycache__/
-/build/
 *.egg-info/
+.tox/
 .venv/
 .vscode/
+/build/
+/dist/
 /pip-wheel-metadata/

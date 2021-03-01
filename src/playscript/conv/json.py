@@ -66,9 +66,9 @@ def _psc_dict_hook(obj):
     '''
     if type(obj) == dict and obj.get('class') == 'PSc':
         title = obj.get('title', '')
-        author=obj.get('author', '')
-        chars=obj.get('chars', [])
-        lines=obj.get('lines', [])
+        author = obj.get('author', '')
+        chars = obj.get('chars', [])
+        lines = obj.get('lines', [])
 
         sc = PSc(title=title, author=author, chars=chars, lines=lines)
         return sc

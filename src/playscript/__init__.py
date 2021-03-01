@@ -1,1 +1,1 @@
-from .psc import PScLineType, PScLine, PSc
+from .psc import PScLineType, PScLine, PSc  # NOQA

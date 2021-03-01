@@ -36,12 +36,27 @@ class TestDialogueLine(unittest.TestCase):
         self.assertEqual(line.name, '名前')
         self.assertEqual(line.text, 'セリフ')
 
+        text = '名前「セリフ」'
+        line = PScLine.from_text(line_type, text)
+        self.assertEqual(line.name, '名前')
+        self.assertEqual(line.text, 'セリフ')
+
+        text = '名前 「セリフ」'
+        line = PScLine.from_text(line_type, text)
+        self.assertEqual(line.name, '名前')
+        self.assertEqual(line.text, 'セリフ')
+
         text = '名前「セリフ'
         line = PScLine.from_text(line_type, text)
         self.assertEqual(line.name, '名前')
         self.assertEqual(line.text, 'セリフ')
 
-        text = '名前 「セリフ'
-        line = PScLine.from_text(line_type, text)
+        text = 'セリフ'
+        line = PScLine.from_text(line_type, text, default_name='名前')
+        self.assertEqual(line.name, '名前')
+        self.assertEqual(line.text, 'セリフ')
+
+        text = '「セリフ」'
+        line = PScLine.from_text(line_type, text, default_name='名前')
         self.assertEqual(line.name, '名前')
         self.assertEqual(line.text, 'セリフ')
