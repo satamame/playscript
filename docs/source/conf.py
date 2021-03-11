@@ -35,7 +35,8 @@ language = 'ja'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
-    "sphinx_multiversion",
+    'sphinx_rtd_theme',
+    'sphinx_multiversion',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -58,3 +59,8 @@ html_theme = 'sphinx_rtd_theme'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# -- Options for sphinx-multiversion -----------------------------------------
+
+smv_tag_whitelist = r'^0.2.2$|^\d+\.\d+$'
+smv_branch_whitelist = r'^master$'
