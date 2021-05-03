@@ -10,7 +10,11 @@ upload to PyPI:
 docstring から rst を生成
 > sphinx-apidoc -f -o docs/source src
 
+コミットしてタグをつける
+
 rst から html を生成
 > sphinx-build -b html docs/source docs/build
 or
 > sphinx-multiversion docs/source docs/build
+
+"docs/build" 以下を gh-pages ブランチのルートへ
