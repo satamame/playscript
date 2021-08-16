@@ -1,8 +1,17 @@
-test:
-> tox
-
 build:
-> python -m pep517.build .
+> py -m build .
+
+single test:
+(.venv) > pip install . --use-feature=in-tree-build
+(.venv) > py -m unittest -v tests.test_module_name{.class_name{.method_name}}
+
+single test w/o build:
+(.venv) > pip install -e .
+(.venv) > py -m unittest -v tests.test_module_name{.class_name{.method_name}}
+
+cross-version test:
+> del .tox
+> tox
 
 upload to PyPI:
 > twine upload --repository pypi dist/*

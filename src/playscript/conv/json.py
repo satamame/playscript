@@ -4,8 +4,8 @@ from .. import PScLineType, PScLine, PSc
 
 
 class PScObjEncoder(json.JSONEncoder):
-    '''Convert PSc object to a dict structure
-    '''
+    """Convert PSc object to a dict structure.
+    """
 
     def default(self, obj):
         if isinstance(obj, PSc):
@@ -21,8 +21,8 @@ class PScObjEncoder(json.JSONEncoder):
 
 
 class PScLineObjEncoder(json.JSONEncoder):
-    '''Convert PScLine object to a dict structure
-    '''
+    """Convert PScLine object to a dict structure.
+    """
 
     def default(self, obj):
         if isinstance(obj, PScLine):
@@ -40,30 +40,30 @@ class PScLineObjEncoder(json.JSONEncoder):
 
 
 class PScEncoder(PScObjEncoder, PScLineObjEncoder):
-    '''Encode whole PSc object to a JSON string
-    '''
+    """Encode whole PSc object to a JSON string.
+    """
     pass
 
 
 def psc_dump(sc, fp, cls=PScEncoder, ensure_ascii=False, **kwargs):
-    '''Serialize a PSc object and stream it to file-like object
-    '''
+    """Serialize a PSc object and stream it to file-like object.
+    """
     kwargs['cls'] = cls
     kwargs['ensure_ascii'] = ensure_ascii
     return json.dump(sc, fp, **kwargs)
 
 
 def psc_dumps(sc, cls=PScEncoder, ensure_ascii=False, **kwargs):
-    '''Serialize a PSc object to str object
-    '''
+    """Serialize a PSc object to str object.
+    """
     kwargs['cls'] = cls
     kwargs['ensure_ascii'] = ensure_ascii
     return json.dumps(sc, **kwargs)
 
 
 def _psc_dict_hook(obj):
-    '''Decode a dict with entry class:PSc into PSc object
-    '''
+    """Decode a dict with entry class:PSc into PSc object.
+    """
     if type(obj) == dict and obj.get('class') == 'PSc':
         title = obj.get('title', '')
         author = obj.get('author', '')
@@ -77,8 +77,8 @@ def _psc_dict_hook(obj):
 
 
 def _psc_line_dict_hook(obj):
-    '''Decode a dict with entry class:PScLine into PScLine object
-    '''
+    """Decode a dict with entry class:PScLine into PScLine object.
+    """
     if type(obj) == dict and obj.get('class') == 'PScLine':
         line_type = PScLineType[obj['type']]
         name = obj.get('name')
@@ -91,8 +91,8 @@ def _psc_line_dict_hook(obj):
 
 
 def _psc_hook(obj):
-    '''Decode any dict contained in encoded PSc object
-    '''
+    """Decode any dict contained in encoded PSc object.
+    """
     hooks = [_psc_dict_hook, _psc_line_dict_hook]
     for hook in hooks:
         obj = hook(obj)
@@ -100,14 +100,14 @@ def _psc_hook(obj):
 
 
 def psc_load(fp, object_hook=_psc_hook, **kwargs):
-    '''Deserialize a stream from file-like object into PSc object
-    '''
+    """Deserialize a stream from file-like object into PSc object.
+    """
     kwargs['object_hook'] = object_hook
     return json.load(fp, **kwargs)
 
 
 def psc_loads(s, object_hook=_psc_hook, **kwargs):
-    '''Deserialize a str object into PSc object
-    '''
+    """Deserialize a str object into PSc object.
+    """
     kwargs['object_hook'] = object_hook
     return json.loads(s, **kwargs)

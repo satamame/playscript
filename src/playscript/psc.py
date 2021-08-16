@@ -1,12 +1,12 @@
-'''Classes to make up play script object.
-'''
+"""Classes to make up play script object.
+"""
 import re
 from enum import Enum
 
 
 class PScLineType(Enum):
-    '''Types for PScLine.
-    '''
+    """Types for PScLine.
+    """
     TITLE = 0                   # Title
     AUTHOR = 1                  # Author name
     CHARSHEADLINE = 2           # Headline of character list
@@ -26,22 +26,22 @@ class PScLineType(Enum):
 
 
 class PScLine:
-    '''Line in PSc lines.
-    '''
+    """Line in PSc lines.
+    """
     # Opening and closing brackets for text in dialogue lines.
     # More than one characters can be set and matched as each.
     # In addition, space character is used as name-text delimiter implicitly.
     dlg_brackets = ('「', '」')
 
     def __init__(self, line_type, name=None, text=None):
-        '''Constructor.
+        """Constructor.
 
         Parameters
         ----------
-        line_type : playscript.PScLineType
+        line_type : PScLineType
         name : str
         text : str
-        '''
+        """
         try:
             self.type = PScLineType(line_type)
         except ValueError:
@@ -68,29 +68,31 @@ class PScLine:
     @classmethod
     def from_text(cls, line_type, text, *, default_name='*',
                   dlg_brackets=None):
-        '''Make PScLine object from PScLineType and a text.
+        """Make PScLine object from PScLineType and a text.
 
         Parameters
         ----------
-        line_type : playscript.PScLineType
+        line_type : PScLineType
         text : str
             Input text that the PScLine object is made from.
         default_name : str
-            Used as name if no space or bracket in text.
+            Used as name if no space or bracket in dialogue line.
         dlg_brackets : list-like[str]
             Tuple/list of opening bracket chars and closing bracket chars.
 
         Returns
         -------
-        line : playscript.PScLine
-        '''
+        line : PScLine
+        """
         # Delimiter of name and text in character lines.
-        chr_delimiter = re.compile(r'\s+')
+        # (Colon or space followed by extra spaces.)
+        chr_delimiter = re.compile(r'[:\s]\s*')
 
         if not dlg_brackets:
             dlg_brackets = cls.dlg_brackets
 
         # Delimiter of name and text in dialogue lines.
+        # (Bracket or space following extra spaces.)
         dlg_delimiter = re.compile(f'\\s*[\\s{dlg_brackets[0]}]')
 
         text = text.strip()
@@ -118,16 +120,16 @@ class PScLine:
 
             return cls(line_type, name=name, text=text)
 
-        # TODO: line_type が数字や文字列だった場合に対応する。
+        # TODO: line_type が数字や文字列だった場合に対応する？
 
         return cls(line_type, text=text)
 
 
 class PSc:
-    '''Play script.
-    '''
+    """Play script.
+    """
     def __init__(self, title='', author='', chars=[], lines=[]):
-        '''Constructor.
+        """Constructor.
 
         Parameters
         ----------
@@ -135,7 +137,7 @@ class PSc:
         author : str
         chars : list-like[str]
         lines : list-like[str]
-        '''
+        """
         self.title = title
         self.author = author
         self.chars = chars
@@ -144,31 +146,31 @@ class PSc:
 
     @classmethod
     def from_lines(cls, lines):
-        '''Make PSc object from PScLine objects.
+        """Make PSc object from PScLine objects.
 
         Parameters
         ----------
-        lines : list-like[playscript.PScLine]
+        lines : list-like[PScLine]
 
         Returns
         -------
-        script : playscript.PSc
-        '''
+        script : PSc
+        """
         return cls(lines=lines)
 
     @classmethod
     def lines_from_types_and_texts(cls, line_types, texts):
-        '''Make PScLine list from line types and source texts.
+        """Make PScLine list from line types and source texts.
 
         Parameters
         ----------
-        line_types : list-like[playscript.PScLineType]
+        line_types : list-like[PScLineType]
         texts : list-like[str]
 
         Returns
         -------
-        lines : list[playscript.PScLine]
-        '''
+        lines : list[PScLine]
+        """
         lines = []
         for line_type, text in zip(line_types, texts):
             line = PScLine.from_text(line_type, text)

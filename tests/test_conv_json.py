@@ -6,8 +6,8 @@ from playscript.conv.json import psc_dumps, psc_loads
 
 
 class TestEncoder(unittest.TestCase):
-    '''Testing if PSc object is encoded properly
-    '''
+    """Testing if PSc object is encoded properly
+    """
     def test_encode_play_sc(self):
         lines = []
 
@@ -68,8 +68,8 @@ class TestEncoder(unittest.TestCase):
 
 
 class TestDecoder(unittest.TestCase):
-    '''Testing if PSc object is decoded properly
-    '''
+    """Testing if PSc object is decoded properly
+    """
     def test_decode_play_sc(self):
         sc_dict = {
             "class": "PSc",
