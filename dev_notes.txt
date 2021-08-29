@@ -13,6 +13,9 @@ cross-version test:
 > del .tox
 > tox
 
+upload to TestPyPI:
+> twine upload --repository testpypi dist/*
+
 upload to PyPI:
 > twine upload --repository pypi dist/*
 
@@ -22,8 +25,8 @@ docstring から rst を生成
 コミットしてタグをつける
 
 rst から html を生成
-> sphinx-build -b html docs/source docs/build
+(.venv) > sphinx-build -b html docs/source docs/build
 or
-> sphinx-multiversion docs/source docs/build
+(.venv) > sphinx-multiversion docs/source docs/build
 
 "docs/build" 以下を gh-pages ブランチのルートへ

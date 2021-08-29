@@ -77,3 +77,17 @@ fountain_str = textwrap.dedent('''\
 
 script = psc_from_fountain(fountain_str)
 ```
+
+### Creating PDF from fountain (Japanese style) file
+
+```python
+from playscript.conv import fountain, pdf
+
+with open('example.fountain', encoding='utf-8-sig') as f:
+    script = fountain.psc_from_fountain(f.read())
+
+pdf_stream = pdf.psc_to_pdf(script)
+
+with open('out.pdf', 'wb') as f:
+    f.write(pdf_stream.read())
+```
