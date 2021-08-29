@@ -6,9 +6,12 @@
 
 台本を構造化データとして扱うためのパッケージです。
 
+- PyPI : https://pypi.org/project/playscript/
+- Doc : https://satamame.github.io/playscript/
+
 ## インストール
 
-PyPi からインストールする場合は、追加で fountain をインストールします。
+PyPI からインストールする場合は、追加で fountain をインストールします。
 
 ```
 > pip install playscript

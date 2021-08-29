@@ -6,9 +6,12 @@
 
 Package for play script structure in Japanese style.
 
+- PyPI : https://pypi.org/project/playscript/
+- Doc : https://satamame.github.io/playscript/
+
 ## Install
 
-When installing from PyPi, you need to install fountain in addition.
+When installing from PyPI, you need to install fountain in addition.
 
 ```
 > pip install playscript
