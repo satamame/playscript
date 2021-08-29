@@ -1,0 +1,552 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ja" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>playscript.conv package &mdash; playscript 0.2.3 ドキュメント</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="検索" href="search.html" />
+    <link rel="prev" title="playscript package" href="playscript.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> playscript
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="playscript.html">playscript package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="playscript.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">playscript.conv package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-playscript.conv.fountain">playscript.conv.fountain module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-playscript.conv.json">playscript.conv.json module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-playscript.conv.pdf">playscript.conv.pdf module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-playscript.conv">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="playscript.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="playscript.html#module-playscript.psc">playscript.psc module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="playscript.html#module-playscript">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">playscript</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="playscript.html">playscript package</a> &raquo;</li>
+        
+      <li>playscript.conv package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/playscript.conv.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="playscript-conv-package">
+<h1>playscript.conv package<a class="headerlink" href="#playscript-conv-package" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+<div class="section" id="module-playscript.conv.fountain">
+<span id="playscript-conv-fountain-module"></span><h2>playscript.conv.fountain module<a class="headerlink" href="#module-playscript.conv.fountain" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py function">
+<dt id="playscript.conv.fountain.psc_from_fountain">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.fountain.</span></code><code class="sig-name descname"><span class="pre">psc_from_fountain</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_line</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">charsheadline</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['登場人物']</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">charlines_break</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'*'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.fountain.psc_from_fountain" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Parse a str into PSc object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s</strong> (<em>str</em>) -- A fountain string to parse.</p></li>
+<li><p><strong>empty_line</strong> (<em>bool</em>) -- If False, empty lines are ignored.</p></li>
+<li><p><strong>charsheadline</strong> (<em>list-like</em><em>[</em><em>str</em><em>]</em>) -- Texts to be recognized as a CHARSHEADLINE.</p></li>
+<li><p><strong>charlines_break</strong> (<em>bool</em>) -- Character lines could be multi-line, empty line separates them.</p></li>
+<li><p><strong>default_name</strong> (<em>str</em>) -- Used as name if no space or bracket in dialogue line.</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p><strong>script</strong></p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p><a class="reference internal" href="playscript.html#playscript.psc.PSc" title="playscript.psc.PSc">PSc</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-playscript.conv.json">
+<span id="playscript-conv-json-module"></span><h2>playscript.conv.json module<a class="headerlink" href="#module-playscript.conv.json" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt id="playscript.conv.json.PScEncoder">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">playscript.conv.json.</span></code><code class="sig-name descname"><span class="pre">PScEncoder</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skipkeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ensure_ascii</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_circular</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.json.PScEncoder" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <a class="reference internal" href="#playscript.conv.json.PScObjEncoder" title="playscript.conv.json.PScObjEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">playscript.conv.json.PScObjEncoder</span></code></a>, <a class="reference internal" href="#playscript.conv.json.PScLineObjEncoder" title="playscript.conv.json.PScLineObjEncoder"><code class="xref py py-class docutils literal notranslate"><span class="pre">playscript.conv.json.PScLineObjEncoder</span></code></a></p>
+<p>Encode whole PSc object to a JSON string.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="playscript.conv.json.PScLineObjEncoder">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">playscript.conv.json.</span></code><code class="sig-name descname"><span class="pre">PScLineObjEncoder</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skipkeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ensure_ascii</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_circular</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.json.PScLineObjEncoder" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">json.encoder.JSONEncoder</span></code></p>
+<p>Convert PScLine object to a dict structure.</p>
+<dl class="py method">
+<dt id="playscript.conv.json.PScLineObjEncoder.default">
+<code class="sig-name descname"><span class="pre">default</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.json.PScLineObjEncoder.default" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Implement this method in a subclass such that it returns
+a serializable object for <code class="docutils literal notranslate"><span class="pre">o</span></code>, or calls the base implementation
+(to raise a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>).</p>
+<p>For example, to support arbitrary iterators, you could
+implement default like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">iterable</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+    <span class="c1"># Let the base class default method raise the TypeError</span>
+    <span class="k">return</span> <span class="n">JSONEncoder</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="playscript.conv.json.PScObjEncoder">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">playscript.conv.json.</span></code><code class="sig-name descname"><span class="pre">PScObjEncoder</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">skipkeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ensure_ascii</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">check_circular</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_nan</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sort_keys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">separators</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.json.PScObjEncoder" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">json.encoder.JSONEncoder</span></code></p>
+<p>Convert PSc object to a dict structure.</p>
+<dl class="py method">
+<dt id="playscript.conv.json.PScObjEncoder.default">
+<code class="sig-name descname"><span class="pre">default</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.json.PScObjEncoder.default" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Implement this method in a subclass such that it returns
+a serializable object for <code class="docutils literal notranslate"><span class="pre">o</span></code>, or calls the base implementation
+(to raise a <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>).</p>
+<p>For example, to support arbitrary iterators, you could
+implement default like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">iterable</span> <span class="o">=</span> <span class="nb">iter</span><span class="p">(</span><span class="n">o</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+        <span class="k">pass</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">iterable</span><span class="p">)</span>
+    <span class="c1"># Let the base class default method raise the TypeError</span>
+    <span class="k">return</span> <span class="n">JSONEncoder</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">o</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.json.psc_dump">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.json.</span></code><code class="sig-name descname"><span class="pre">psc_dump</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sc</span></em>, <em class="sig-param"><span class="pre">fp</span></em>, <em class="sig-param"><span class="pre">cls=&lt;class</span> <span class="pre">'playscript.conv.json.PScEncoder'&gt;</span></em>, <em class="sig-param"><span class="pre">ensure_ascii=False</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.json.psc_dump" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Serialize a PSc object and stream it to file-like object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.json.psc_dumps">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.json.</span></code><code class="sig-name descname"><span class="pre">psc_dumps</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">sc</span></em>, <em class="sig-param"><span class="pre">cls=&lt;class</span> <span class="pre">'playscript.conv.json.PScEncoder'&gt;</span></em>, <em class="sig-param"><span class="pre">ensure_ascii=False</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.json.psc_dumps" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Serialize a PSc object to str object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.json.psc_load">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.json.</span></code><code class="sig-name descname"><span class="pre">psc_load</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">fp</span></em>, <em class="sig-param"><span class="pre">object_hook=&lt;function</span> <span class="pre">_psc_hook&gt;</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.json.psc_load" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Deserialize a stream from file-like object into PSc object.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.json.psc_loads">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.json.</span></code><code class="sig-name descname"><span class="pre">psc_loads</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="pre">s</span></em>, <em class="sig-param"><span class="pre">object_hook=&lt;function</span> <span class="pre">_psc_hook&gt;</span></em>, <em class="sig-param"><span class="pre">**kwargs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.json.psc_loads" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Deserialize a str object into PSc object.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-playscript.conv.pdf">
+<span id="playscript-conv-pdf-module"></span><h2>playscript.conv.pdf module<a class="headerlink" href="#module-playscript.conv.pdf" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py class">
+<dt id="playscript.conv.pdf.PageMan">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">playscript.conv.pdf.</span></code><code class="sig-name descname"><span class="pre">PageMan</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_space</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'HeiseiMin-W3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_font_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Times-Roman'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_space</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before_init_page</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.close">
+<code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.close" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.commit_page">
+<code class="sig-name descname"><span class="pre">commit_page</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.commit_page" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_author">
+<code class="sig-name descname"><span class="pre">draw_author</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">athr_line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_author" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>著者名を書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_character">
+<code class="sig-name descname"><span class="pre">draw_character</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">char_line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_character" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>登場人物行を書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_charsheadline">
+<code class="sig-name descname"><span class="pre">draw_charsheadline</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chead_line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_charsheadline" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>登場人物見出し行を書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_comment">
+<code class="sig-name descname"><span class="pre">draw_comment</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmmt_line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_comment" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>コメント行を書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_dialogue">
+<code class="sig-name descname"><span class="pre">draw_dialogue</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dlg_line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_dialogue" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>セリフ行を書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_direction">
+<code class="sig-name descname"><span class="pre">draw_direction</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">drct_line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_direction" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ト書き行を書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_empty">
+<code class="sig-name descname"><span class="pre">draw_empty</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">empty_line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_empty" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>空行を書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_endmark">
+<code class="sig-name descname"><span class="pre">draw_endmark</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">endmk_line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_endmark" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>エンドマークを書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_line">
+<code class="sig-name descname"><span class="pre">draw_line</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_line" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>テキストを行末まで書き出して残りを返す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_line_bottom">
+<code class="sig-name descname"><span class="pre">draw_line_bottom</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_line_bottom" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>テキストを下寄せで書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_lines">
+<code class="sig-name descname"><span class="pre">draw_lines</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_lines" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>複数行に渡るテキストを書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_single_line">
+<code class="sig-name descname"><span class="pre">draw_single_line</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indent</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_single_line" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>1行に収まるテキストを書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_slugline">
+<code class="sig-name descname"><span class="pre">draw_slugline</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hx_line</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">border</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_slugline" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>柱を書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.draw_title">
+<code class="sig-name descname"><span class="pre">draw_title</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ttl_line</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.draw_title" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>題名を書き出す</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.get_line_x">
+<code class="sig-name descname"><span class="pre">get_line_x</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">l_idx</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.get_line_x" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.get_line_y">
+<code class="sig-name descname"><span class="pre">get_line_y</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">indent</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.get_line_y" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.init_page">
+<code class="sig-name descname"><span class="pre">init_page</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.init_page" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ページごとの初期化処理</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.max_line_count">
+<code class="sig-name descname"><span class="pre">max_line_count</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.max_line_count" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.save">
+<code class="sig-name descname"><span class="pre">save</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.save" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PDF をファイルに出力する</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><p><strong>file_name</strong> (<em>str</em>) -- 出力先のファイル名</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="playscript.conv.pdf.Size">
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">playscript.conv.pdf.</span></code><code class="sig-name descname"><span class="pre">Size</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">w</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.Size" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></p>
+<dl class="py attribute">
+<dt id="playscript.conv.pdf.Size.h">
+<code class="sig-name descname"><span class="pre">h</span></code><a class="headerlink" href="#playscript.conv.pdf.Size.h" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Alias for field number 1</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="playscript.conv.pdf.Size.w">
+<code class="sig-name descname"><span class="pre">w</span></code><a class="headerlink" href="#playscript.conv.pdf.Size.w" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>Alias for field number 0</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.pdf.get_h2_letter">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.pdf.</span></code><code class="sig-name descname"><span class="pre">get_h2_letter</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">h2_count</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.get_h2_letter" title="この定義へのパーマリンク">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.pdf.psc_to_pdf">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.pdf.</span></code><code class="sig-name descname"><span class="pre">psc_to_pdf</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_space</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'HeiseiMin-W3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_font_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Times-Roman'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_space</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before_init_page</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_page_num</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.psc_to_pdf" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>PSc オブジェクトから PDF を生成する</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>psc</strong> (<a class="reference internal" href="playscript.html#playscript.psc.PSc" title="playscript.psc.PSc"><em>PSc</em></a>) -- ソースとなる PSc オブジェクト</p></li>
+<li><p><strong>size</strong> (<em>tuple</em>) -- ページのサイズ (ポイント)</p></li>
+<li><p><strong>margin</strong> (<em>tuple</em>) -- 左右と上下のマージン (ポイント)</p></li>
+<li><p><strong>upper_space</strong> (<em>float</em>) -- 上の余白 (ポイント)</p></li>
+<li><p><strong>font_name</strong> (<em>str</em>) -- 本文のフォント</p></li>
+<li><p><strong>num_font_name</strong> (<em>str</em>) -- 数字のフォント</p></li>
+<li><p><strong>font_size</strong> (<em>float</em>) -- 本文のフォントサイズ (ポイント)</p></li>
+<li><p><strong>line_space</strong> (<em>float</em>) -- 本文の行間 (ポイント)</p></li>
+<li><p><strong>before_init_page</strong> (<em>function</em>) -- ページ初期化時のカスタム処理の関数</p></li>
+<li><p><strong>draw_page_num</strong> (<em>bool</em>) -- ページ番号を書き出すかどうか</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p><strong>pdf</strong> -- 生成した PDF のバイナリストリーム</p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>BytesIO</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-playscript.conv">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-playscript.conv" title="このヘッドラインへのパーマリンク">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="playscript.html" class="btn btn-neutral float-left" title="playscript package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, satamame.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    <span class="fa fa-book"> Other Versions</span>
+    v: 0.2.3
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Tags</dt>
+      <dd><a href="../0.2.2/playscript.conv.html">0.2.2</a></dd>
+      <dd><a href="playscript.conv.html">0.2.3</a></dd>
+    </dl>
+    <dl>
+      <dt>Branches</dt>
+      <dd><a href="../master/playscript.conv.html">master</a></dd>
+    </dl>
+  </div>
+</div>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
