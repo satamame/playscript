@@ -6,6 +6,21 @@
 
 台本を構造化データとして扱うためのパッケージです。
 
+## インストール
+
+PyPi からインストールする場合は、追加で fountain をインストールします。
+
+```
+> pip install playscript
+> pip install git+https://github.com/Tagirijus/fountain.git@7da5447abae640f34448dd36fee83f47a7415fcf
+```
+
+GitHub からインストールする場合は、以下のコマンドでインストールされます。
+
+```
+> pip install git+https://github.com/satamame/playscript.git
+```
+
 ## クラス
 
 ### PSc

@@ -20,7 +20,7 @@ upload to PyPI:
 > twine upload --repository pypi dist/*
 
 docstring から rst を生成
-> sphinx-apidoc -f -o docs/source src
+(.venv) > sphinx-apidoc -f -o docs/source src
 
 コミットしてタグをつける
 

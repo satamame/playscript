@@ -6,6 +6,21 @@
 
 Package for play script structure in Japanese style.
 
+## Install
+
+When installing from PyPi, you need to install fountain in addition.
+
+```
+> pip install playscript
+> pip install git+https://github.com/Tagirijus/fountain.git@7da5447abae640f34448dd36fee83f47a7415fcf
+```
+
+When installing from GitHub, below command is enough.
+
+```
+> pip install git+https://github.com/satamame/playscript.git
+```
+
 ## Classes
 
 ### PSc
