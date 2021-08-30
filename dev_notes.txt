@@ -19,6 +19,9 @@ upload to TestPyPI:
 upload to PyPI:
 > twine upload --repository pypi dist/*
 
+※PyPI にアップロードする時は、setup.cfg の install_requires から、fountain を削除する。
+※GitHub に上げる時に元に戻す。
+
 docstring から rst を生成
 (.venv) > sphinx-apidoc -f -o docs/source src
 
@@ -27,6 +30,8 @@ docstring から rst を生成
 rst から html を生成
 (.venv) > sphinx-build -b html docs/source docs/build
 or
-(.venv) > sphinx-multiversion docs/source docs/build
+(.venv) > sphinx-multiversion docs/source docs/build (マルチバージョンなのでこっち)
 
 "docs/build" 以下を gh-pages ブランチのルートへ
+
+※結局、「コピー → ブランチ切り替え → コピー」が楽だった。

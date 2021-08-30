@@ -6,17 +6,19 @@
 playscript - 台本データを扱うパッケージ
 =======================================
 
-主に日本語で書かれた台本を扱います。
+| 主に日本語で書かれた台本を扱います。
+| 基本となる :py:class:`playscript.psc.PSc` クラスのオブジェクトが台本データとなります。
+| このオブジェクトを介して形式変換などの操作をします。
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: 目次
 
    playscript
 
-Indices and tables
-==================
+索引・表
+========
 
 * :ref:`genindex`
 * :ref:`modindex`
-* :ref:`search`
+.. * :ref:`search`

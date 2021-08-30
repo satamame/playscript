@@ -1,4 +1,4 @@
-"""Classes to make up play script object.
+"""台本オブジェクトを構成するクラス群
 """
 import re
 from enum import Enum
@@ -126,10 +126,10 @@ class PScLine:
 
 
 class PSc:
-    """Play script.
+    """台本クラス
     """
     def __init__(self, title='', author='', chars=[], lines=[]):
-        """Constructor.
+        """コンストラクタ
 
         Parameters
         ----------
@@ -146,30 +146,33 @@ class PSc:
 
     @classmethod
     def from_lines(cls, lines):
-        """Make PSc object from PScLine objects.
+        """行オブジェクトのリストから台本オブジェクトを作る
 
         Parameters
         ----------
         lines : list-like[PScLine]
+            行オブジェクトのリスト (またはイテラブル)
 
         Returns
         -------
-        script : PSc
+        台本オブジェクト : PSc
         """
         return cls(lines=lines)
 
     @classmethod
     def lines_from_types_and_texts(cls, line_types, texts):
-        """Make PScLine list from line types and source texts.
+        """行の種類とテキストから、行オブジェクトのリストを作る
 
         Parameters
         ----------
         line_types : list-like[PScLineType]
+            行の種類のリスト (またはイテラブル)
         texts : list-like[str]
+            行のテキストのリスト (またはイテラブル)
 
         Returns
         -------
-        lines : list[PScLine]
+        行オブジェクトのリスト : list[PScLine]
         """
         lines = []
         for line_type, text in zip(line_types, texts):
