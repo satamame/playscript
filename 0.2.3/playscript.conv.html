@@ -300,6 +300,26 @@ implement default like this:</p>
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">playscript.conv.pdf.</span></code><code class="sig-name descname"><span class="pre">PageMan</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_space</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'HeiseiMin-W3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_font_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Times-Roman'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_space</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before_init_page</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <dl class="py method">
+<dt id="playscript.conv.pdf.PageMan.__init__">
+<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_space</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'HeiseiMin-W3'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_font_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Times-Roman'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">font_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">line_space</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">before_init_page</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.__init__" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>コンストラクタ</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>size</strong> (<em>tuple</em>) -- ページのサイズ (ポイント)</p></li>
+<li><p><strong>margin</strong> (<em>tuple</em>) -- 左右と上下のマージン (ポイント)</p></li>
+<li><p><strong>upper_space</strong> (<em>float</em>) -- 上の余白 (ポイント)</p></li>
+<li><p><strong>font_name</strong> (<em>str</em>) -- 本文のフォント</p></li>
+<li><p><strong>num_font_name</strong> (<em>str</em>) -- 数字のフォント</p></li>
+<li><p><strong>font_size</strong> (<em>float</em>) -- 本文のフォントサイズ (ポイント)</p></li>
+<li><p><strong>line_space</strong> (<em>float</em>) -- 本文の行間 (ポイント)</p></li>
+<li><p><strong>before_init_page</strong> (<em>function</em>) -- ページ初期化時のカスタム処理の関数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="playscript.conv.pdf.PageMan.close">
 <code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.pdf.PageMan.close" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
@@ -529,6 +549,7 @@ implement default like this:</p>
       <dt>Tags</dt>
       <dd><a href="../0.2.2/playscript.conv.html">0.2.2</a></dd>
       <dd><a href="playscript.conv.html">0.2.3</a></dd>
+      <dd><a href="../0.2.4/playscript.conv.html">0.2.4</a></dd>
     </dl>
     <dl>
       <dt>Branches</dt>
