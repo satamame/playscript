@@ -5,7 +5,7 @@ from enum import Enum
 
 
 class PScLineType(Enum):
-    """Types for PScLine.
+    """台本行の種類
     """
     TITLE = 0                   # Title
     AUTHOR = 1                  # Author name
@@ -26,39 +26,42 @@ class PScLineType(Enum):
 
 
 class PScLine:
-    """Line in PSc lines.
+    """台本行クラス
     """
     # Opening and closing brackets for text in dialogue lines.
     # More than one characters can be set and matched as each.
     # In addition, space character is used as name-text delimiter implicitly.
-    dlg_brackets = ('「', '」')
+    _dlg_brackets = ('「', '」')
 
     def __init__(self, line_type, name=None, text=None):
-        """Constructor.
+        """コンストラクタ
 
         Parameters
         ----------
         line_type : PScLineType
+            行の種類
         name : str
+            登場人物行、セリフ行の名前部分
         text : str
+            テキスト部分
         """
         try:
             self.type = PScLineType(line_type)
         except ValueError:
             raise TypeError(
-                'Argument "line_type" should be a PScLineType member.')
+                "Argument 'line_type' should be a PScLineType member.")
 
-        if line_type in (PScLineType.CHARACTER, PScLineType.DIALOGUE):
+        if self.type in (PScLineType.CHARACTER, PScLineType.DIALOGUE):
             if not name:
                 raise ValueError(
-                    'Argument "name" is required '
-                    'for type CHARACTER or DIALOGUE.')
+                    "Argument 'name' is required "
+                    "for type CHARACTER or DIALOGUE.")
 
-        if line_type not in (PScLineType.EMPTY, PScLineType.CHARACTER):
+        if self.type not in (PScLineType.EMPTY, PScLineType.CHARACTER):
             if not text:
                 raise ValueError(
-                    'Argument "text" is required '
-                    'for the other types than EMPTY or CHARACTER.')
+                    "Argument 'text' is required "
+                    "for the other types than EMPTY or CHARACTER.")
 
         if name:
             self.name = name
@@ -68,28 +71,29 @@ class PScLine:
     @classmethod
     def from_text(cls, line_type, text, *, default_name='*',
                   dlg_brackets=None):
-        """Make PScLine object from PScLineType and a text.
+        """行の種類と文字列から、台本行オブジェクトを作る
 
         Parameters
         ----------
         line_type : PScLineType
+            行の種類
         text : str
-            Input text that the PScLine object is made from.
+            行を表す文字列
         default_name : str
-            Used as name if no space or bracket in dialogue line.
+            名前部分を切り出せない場合に使う名前
         dlg_brackets : list-like[str]
-            Tuple/list of opening bracket chars and closing bracket chars.
+            開き括弧とみなす文字と、閉じ括弧とみなす文字
 
         Returns
         -------
-        line : PScLine
+        台本行オブジェクト : PScLine
         """
         # Delimiter of name and text in character lines.
         # (Colon or space followed by extra spaces.)
         chr_delimiter = re.compile(r'[:\s]\s*')
 
         if not dlg_brackets:
-            dlg_brackets = cls.dlg_brackets
+            dlg_brackets = cls._dlg_brackets
 
         # Delimiter of name and text in dialogue lines.
         # (Bracket or space following extra spaces.)
@@ -134,9 +138,13 @@ class PSc:
         Parameters
         ----------
         title : str
+            題名
         author : str
+            著者名
         chars : list-like[str]
-        lines : list-like[str]
+            登場人物のリスト
+        lines : list-like[PScLine]
+            台本行オブジェクトのリスト (イテラブル)
         """
         self.title = title
         self.author = author
@@ -146,12 +154,12 @@ class PSc:
 
     @classmethod
     def from_lines(cls, lines):
-        """行オブジェクトのリストから台本オブジェクトを作る
+        """台本行オブジェクトのリストから台本オブジェクトを作る
 
         Parameters
         ----------
         lines : list-like[PScLine]
-            行オブジェクトのリスト (またはイテラブル)
+            台本行オブジェクトのリスト (イテラブル)
 
         Returns
         -------
@@ -161,18 +169,18 @@ class PSc:
 
     @classmethod
     def lines_from_types_and_texts(cls, line_types, texts):
-        """行の種類とテキストから、行オブジェクトのリストを作る
+        """行の種類と文字列から、台本行オブジェクトのリストを作る
 
         Parameters
         ----------
         line_types : list-like[PScLineType]
-            行の種類のリスト (またはイテラブル)
+            行の種類のリスト (イテラブル)
         texts : list-like[str]
-            行のテキストのリスト (またはイテラブル)
+            行のテキストのリスト (イテラブル)
 
         Returns
         -------
-        行オブジェクトのリスト : list[PScLine]
+        台本行オブジェクトのリスト : list[PScLine]
         """
         lines = []
         for line_type, text in zip(line_types, texts):

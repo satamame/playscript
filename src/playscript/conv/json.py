@@ -3,7 +3,7 @@ import json
 from .. import PScLineType, PScLine, PSc
 
 
-class PScObjEncoder(json.JSONEncoder):
+class _PScObjEncoder(json.JSONEncoder):
     """Convert PSc object to a dict structure.
     """
 
@@ -20,7 +20,7 @@ class PScObjEncoder(json.JSONEncoder):
             return super().default(obj)
 
 
-class PScLineObjEncoder(json.JSONEncoder):
+class _PScLineObjEncoder(json.JSONEncoder):
     """Convert PScLine object to a dict structure.
     """
 
@@ -39,26 +39,54 @@ class PScLineObjEncoder(json.JSONEncoder):
             return super().default(obj)
 
 
-class PScEncoder(PScObjEncoder, PScLineObjEncoder):
+class _PScEncoder(_PScObjEncoder, _PScLineObjEncoder):
     """Encode whole PSc object to a JSON string.
     """
     pass
 
 
-def psc_dump(sc, fp, cls=PScEncoder, ensure_ascii=False, **kwargs):
-    """Serialize a PSc object and stream it to file-like object.
+def psc_dump(psc, fp, cls=_PScEncoder, ensure_ascii=False, **kwargs):
+    """台本オブジェクトをシリアライズして JSON ファイルに書き出す
+
+    Parameters
+    ----------
+    psc : PSc
+        台本オブジェクト
+    fp : file-like
+        出力先ファイル (ストリーム)
+    cls : class
+        エンコードに使うクラス
+    ensure_ascii : bool
+        ASCII 文字に限定するかどうか
+    **kwargs
+        json.dump に渡すキーワード引数
     """
     kwargs['cls'] = cls
     kwargs['ensure_ascii'] = ensure_ascii
-    return json.dump(sc, fp, **kwargs)
+    json.dump(psc, fp, **kwargs)
 
 
-def psc_dumps(sc, cls=PScEncoder, ensure_ascii=False, **kwargs):
-    """Serialize a PSc object to str object.
+def psc_dumps(psc, cls=_PScEncoder, ensure_ascii=False, **kwargs):
+    """台本オブジェクトをシリアライズして JSON 文字列に書き出す
+
+    Parameters
+    ----------
+    psc : PSc
+        台本オブジェクト
+    cls : class
+        エンコードに使うクラス
+    ensure_ascii : bool
+        ASCII 文字に限定するかどうか
+    **kwargs
+        json.dumps に渡すキーワード引数
+
+    Returns
+    -------
+    JSON 文字列 : str
     """
     kwargs['cls'] = cls
     kwargs['ensure_ascii'] = ensure_ascii
-    return json.dumps(sc, **kwargs)
+    return json.dumps(psc, **kwargs)
 
 
 def _psc_dict_hook(obj):
@@ -100,14 +128,40 @@ def _psc_hook(obj):
 
 
 def psc_load(fp, object_hook=_psc_hook, **kwargs):
-    """Deserialize a stream from file-like object into PSc object.
+    """JSON ファイルをデシリアライズして台本オブジェクトを生成する
+
+    Parameters
+    ----------
+    fp : file-like
+        JSON ファイル (ストリーム)
+    object_hook : function
+        デコードに使うフック関数
+    **kwargs
+        json.load に渡すキーワード引数
+
+    Returns
+    -------
+    台本オブジェクト : PSc
     """
     kwargs['object_hook'] = object_hook
     return json.load(fp, **kwargs)
 
 
 def psc_loads(s, object_hook=_psc_hook, **kwargs):
-    """Deserialize a str object into PSc object.
+    """JSON 文字列をデシリアライズして台本オブジェクトを生成する
+
+    Parameters
+    ----------
+    s : str
+        JSON 文字列
+    object_hook : function
+        デコードに使うフック関数
+    **kwargs
+        json.loads に渡すキーワード引数
+
+    Returns
+    -------
+    台本オブジェクト : PSc
     """
     kwargs['object_hook'] = object_hook
     return json.loads(s, **kwargs)

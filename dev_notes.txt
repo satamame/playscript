@@ -24,13 +24,13 @@ upload to PyPI:
 
 docstring から rst を生成
 (.venv) > sphinx-apidoc -f -o docs/source src
-
-コミットしてタグをつける
+↓
+コミットしてタグをつけること
 
 rst から html を生成
 (.venv) > sphinx-build -b html docs/source docs/build
-or
-(.venv) > sphinx-multiversion docs/source docs/build (マルチバージョンなのでこっち)
+マルチバージョンの場合 (タグつきのコミットから生成)
+(.venv) > sphinx-multiversion docs/source docs/build
 
 "docs/build" 以下を gh-pages ブランチのルートへ
 

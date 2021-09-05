@@ -22,7 +22,7 @@ copyright = '2021, satamame'
 author = 'satamame'
 
 # The full version, including alpha/beta/rc tags
-release = '0.2.3'
+release = '0.2.4'
 
 
 # -- General configuration ---------------------------------------------------
@@ -60,7 +60,11 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = []
 
+# -- Napoleon settings -------------------------------------------------------
+
+napoleon_include_init_with_doc = True
+
 # -- Options for sphinx-multiversion -----------------------------------------
 
-smv_tag_whitelist = r'^0.2.2$|^0.2.3$|^\d+\.\d+$'
+smv_tag_whitelist = r'^0.2.[234]$|^\d+\.\d+$'
 smv_branch_whitelist = r'^master$'

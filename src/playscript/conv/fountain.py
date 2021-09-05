@@ -7,24 +7,24 @@ def psc_from_fountain(
     s, empty_line=False, charsheadline=['登場人物'], charlines_break=False,
     default_name='*'
 ):
-    """Parse a str into PSc object.
+    """Fountain 文字列から台本オブジェクトを生成する
 
     Parameters
     ----------
     s : str
-        A fountain string to parse.
+        Fountain 文字列
     empty_line : bool
-        If False, empty lines are ignored.
+        空行を空行として残すかどうか
     charsheadline : list-like[str]
-        Texts to be recognized as a CHARSHEADLINE.
+        登場人物見出し行とみなす文字列のリスト
     charlines_break : bool
-        Character lines could be multi-line, empty line separates them.
+        登場人物行が複数行に渡るかどうか
     default_name : str
-        Used as name if no space or bracket in dialogue line.
+        名前部分を切り出せない場合に使う名前
 
     Returns
     -------
-    script : PSc
+    台本オブジェクト : PSc
     """
     # Parse the string into Fountain object.
     f = fountain.Fountain(string=s)
