@@ -65,7 +65,7 @@ script = PSc(
 )
 ```
 
-### fountain (日本式) から台本を作る
+### Fountain (日本式) から台本を作る
 
 ```python
 import textwrap
@@ -96,7 +96,7 @@ fountain_str = textwrap.dedent('''\
 script = psc_from_fountain(fountain_str)
 ```
 
-### fountain (日本式) を読み込んで PDF にする
+### Fountain (日本式) を読み込んで PDF にする
 
 ```python
 from playscript.conv import fountain, pdf

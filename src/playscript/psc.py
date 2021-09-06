@@ -1,6 +1,7 @@
 """台本オブジェクトを構成するクラス群
 """
 import re
+import warnings
 from enum import Enum
 
 
@@ -128,6 +129,15 @@ class PScLine:
 
         return cls(line_type, text=text)
 
+    def __str__(self):
+        attrs = [self.type.name]
+        if hasattr(self, 'name'):
+            attrs.append(repr(self.name))
+        if hasattr(self, 'text'):
+            attrs.append(repr(self.text))
+        attrs_str = ', '.join(attrs)
+        return f'{type(self).__name__}({attrs_str})'
+
 
 class PSc:
     """台本クラス
@@ -170,20 +180,30 @@ class PSc:
     @classmethod
     def lines_from_types_and_texts(cls, line_types, texts):
         """行の種類と文字列から、台本行オブジェクトのリストを作る
-
-        Parameters
-        ----------
-        line_types : list-like[PScLineType]
-            行の種類のリスト (イテラブル)
-        texts : list-like[str]
-            行のテキストのリスト (イテラブル)
-
-        Returns
-        -------
-        台本行オブジェクトのリスト : list[PScLine]
         """
-        lines = []
-        for line_type, text in zip(line_types, texts):
-            line = PScLine.from_text(line_type, text)
-            lines.append(line)
-        return lines
+        msg = "`PSc.lines_from_types_and_texts` is deprecated. " \
+            "Use the bare function `lines_from_types_and_texts` instead."
+        warnings.warn(msg, DeprecationWarning, stacklevel=2)
+
+        return lines_from_types_and_texts(line_types, texts)
+
+
+def lines_from_types_and_texts(line_types, texts):
+    """行の種類と文字列から、台本行オブジェクトのリストを作る
+
+    Parameters
+    ----------
+    line_types : list-like[PScLineType]
+        行の種類のリスト (イテラブル)
+    texts : list-like[str]
+        行のテキストのリスト (イテラブル)
+
+    Returns
+    -------
+    台本行オブジェクトのリスト : list[PScLine]
+    """
+    lines = []
+    for line_type, text in zip(line_types, texts):
+        line = PScLine.from_text(line_type, text)
+        lines.append(line)
+    return lines
