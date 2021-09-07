@@ -180,6 +180,9 @@ class PSc:
     @classmethod
     def lines_from_types_and_texts(cls, line_types, texts):
         """行の種類と文字列から、台本行オブジェクトのリストを作る
+
+        このメソッドは非推奨です。
+        代わりに `lines_from_types_and_texts` 関数を使ってください。
         """
         msg = "`PSc.lines_from_types_and_texts` is deprecated. " \
             "Use the bare function `lines_from_types_and_texts` instead."

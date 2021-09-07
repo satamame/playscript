@@ -22,8 +22,8 @@ upload to PyPI:
 ※PyPI にアップロードする時は、setup.cfg の install_requires から、fountain を削除する。
 ※GitHub に上げる時に元に戻す。
 
-docstring から rst を生成
-(.venv) > sphinx-apidoc -f -o docs/source src
+docstring から rst を生成 (maxdepth=1)
+(.venv) > sphinx-apidoc -f -o docs/source src -d 1
 ↓
 コミットしてタグをつけること
 
