@@ -13,6 +13,7 @@
   
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
 
   
   
@@ -97,6 +98,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#module-playscript">Module contents</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="fountain.html">Fountain (日本式)</a></li>
 </ul>
 
             
@@ -170,14 +172,7 @@
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="playscript.conv.html">playscript.conv package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="playscript.conv.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="playscript.conv.html#module-playscript.conv.fountain">playscript.conv.fountain module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="playscript.conv.html#module-playscript.conv.json">playscript.conv.json module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="playscript.conv.html#module-playscript.conv.pdf">playscript.conv.pdf module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="playscript.conv.html#module-playscript.conv">Module contents</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="playscript.conv.html">playscript.conv package</a></li>
 </ul>
 </div>
 </div>
@@ -191,11 +186,7 @@
 <dt id="playscript.psc.PSc">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">playscript.psc.</span></code><code class="sig-name descname"><span class="pre">PSc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.psc.PSc" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>台本クラス</p>
-<dl class="py method">
-<dt id="playscript.psc.PSc.__init__">
-<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">author</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lines</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.psc.PSc.__init__" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コンストラクタ</p>
+<p>コンストラクタ</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
@@ -206,8 +197,6 @@
 </ul>
 </dd>
 </dl>
-</dd></dl>
-
 <dl class="py method">
 <dt id="playscript.psc.PSc.from_lines">
 <em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">from_lines</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lines</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.psc.PSc.from_lines" title="この定義へのパーマリンク">¶</a></dt>
@@ -229,20 +218,8 @@
 <dt id="playscript.psc.PSc.lines_from_types_and_texts">
 <em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">lines_from_types_and_texts</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.psc.PSc.lines_from_types_and_texts" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>行の種類と文字列から、台本行オブジェクトのリストを作る</p>
-<dl class="field-list simple">
-<dt class="field-odd">パラメータ</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>line_types</strong> (<em>list-like</em><em>[</em><a class="reference internal" href="#playscript.psc.PScLineType" title="playscript.psc.PScLineType"><em>PScLineType</em></a><em>]</em>) -- 行の種類のリスト (イテラブル)</p></li>
-<li><p><strong>texts</strong> (<em>list-like</em><em>[</em><em>str</em><em>]</em>) -- 行のテキストのリスト (イテラブル)</p></li>
-</ul>
-</dd>
-<dt class="field-even">戻り値</dt>
-<dd class="field-even"><p><strong>台本行オブジェクトのリスト</strong></p>
-</dd>
-<dt class="field-odd">戻り値の型</dt>
-<dd class="field-odd"><p>list[<a class="reference internal" href="#playscript.psc.PScLine" title="playscript.psc.PScLine">PScLine</a>]</p>
-</dd>
-</dl>
+<p>このメソッドは非推奨です。
+代わりに <cite>lines_from_types_and_texts</cite> 関数を使ってください。</p>
 </dd></dl>
 
 </dd></dl>
@@ -251,11 +228,7 @@
 <dt id="playscript.psc.PScLine">
 <em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">playscript.psc.</span></code><code class="sig-name descname"><span class="pre">PScLine</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.psc.PScLine" title="この定義へのパーマリンク">¶</a></dt>
 <dd><p>ベースクラス: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>台本行クラス</p>
-<dl class="py method">
-<dt id="playscript.psc.PScLine.__init__">
-<code class="sig-name descname"><span class="pre">__init__</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.psc.PScLine.__init__" title="この定義へのパーマリンク">¶</a></dt>
-<dd><p>コンストラクタ</p>
+<p>コンストラクタ</p>
 <dl class="field-list simple">
 <dt class="field-odd">パラメータ</dt>
 <dd class="field-odd"><ul class="simple">
@@ -265,8 +238,6 @@
 </ul>
 </dd>
 </dl>
-</dd></dl>
-
 <dl class="py method">
 <dt id="playscript.psc.PScLine.from_text">
 <em class="property"><span class="pre">classmethod</span> </em><code class="sig-name descname"><span class="pre">from_text</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'*'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dlg_brackets</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.psc.PScLine.from_text" title="この定義へのパーマリンク">¶</a></dt>
@@ -376,6 +347,26 @@
 <code class="sig-name descname"><span class="pre">TITLE</span></code><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="headerlink" href="#playscript.psc.PScLineType.TITLE" title="この定義へのパーマリンク">¶</a></dt>
 <dd></dd></dl>
 
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.psc.lines_from_types_and_texts">
+<code class="sig-prename descclassname"><span class="pre">playscript.psc.</span></code><code class="sig-name descname"><span class="pre">lines_from_types_and_texts</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">texts</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.psc.lines_from_types_and_texts" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>行の種類と文字列から、台本行オブジェクトのリストを作る</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>line_types</strong> (<em>list-like</em><em>[</em><a class="reference internal" href="#playscript.psc.PScLineType" title="playscript.psc.PScLineType"><em>PScLineType</em></a><em>]</em>) -- 行の種類のリスト (イテラブル)</p></li>
+<li><p><strong>texts</strong> (<em>list-like</em><em>[</em><em>str</em><em>]</em>) -- 行のテキストのリスト (イテラブル)</p></li>
+</ul>
+</dd>
+<dt class="field-even">戻り値</dt>
+<dd class="field-even"><p><strong>台本行オブジェクトのリスト</strong></p>
+</dd>
+<dt class="field-odd">戻り値の型</dt>
+<dd class="field-odd"><p>list[<a class="reference internal" href="#playscript.psc.PScLine" title="playscript.psc.PScLine">PScLine</a>]</p>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

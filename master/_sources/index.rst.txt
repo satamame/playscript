@@ -11,10 +11,11 @@ playscript - 台本データを扱うパッケージ
 | このオブジェクトを介して形式変換などの操作をします。
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 目次
 
    playscript
+   fountain
 
 索引・表
 ========
@@ -23,3 +24,10 @@ playscript - 台本データを扱うパッケージ
 * :ref:`modindex`
 
 .. * :ref:`search`
+
+外部リンク
+==========
+
+* `playscript (PyPI) <https://pypi.org/project/playscript/>`_
+* `playscript (GitHub) <https://github.com/satamame/playscript>`_
+* `Fountain (本家) <https://fountain.io/>`_
