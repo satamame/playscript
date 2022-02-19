@@ -93,6 +93,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">playscript.conv package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-playscript.conv.fountain">playscript.conv.fountain module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-playscript.conv.html">playscript.conv.html module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-playscript.conv.json">playscript.conv.json module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-playscript.conv.pdf">playscript.conv.pdf module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-playscript.conv">Module contents</a></li>
@@ -203,6 +204,68 @@
 <dd class="field-odd"><p><a class="reference internal" href="playscript.html#playscript.psc.PSc" title="playscript.psc.PSc">PSc</a></p>
 </dd>
 </dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-playscript.conv.html">
+<span id="playscript-conv-html-module"></span><h2>playscript.conv.html module<a class="headerlink" href="#module-playscript.conv.html" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<dl class="py function">
+<dt id="playscript.conv.html.class_name">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.html.</span></code><code class="sig-name descname"><span class="pre">class_name</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">line_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.html.class_name" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>台本行の種類を HTML の class 名に変換するフィルタ</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.html.default_css">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.html.</span></code><code class="sig-name descname"><span class="pre">default_css</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.html.default_css" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>デフォルトのスタイルシートを取得する</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.html.default_js">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.html.</span></code><code class="sig-name descname"><span class="pre">default_js</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.html.default_js" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>デフォルトの JavaScript を取得する</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.html.default_template">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.html.</span></code><code class="sig-name descname"><span class="pre">default_template</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.html.default_template" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>デフォルトの HTML テンプレートを取得する</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.html.esc_spc">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.html.</span></code><code class="sig-name descname"><span class="pre">esc_spc</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.html.esc_spc" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>空白文字をエスケープするフィルタ</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.html.get_template">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.html.</span></code><code class="sig-name descname"><span class="pre">get_template</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.html.get_template" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>HTML テンプレートを取得する</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.html.psc_to_html">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.html.</span></code><code class="sig-name descname"><span class="pre">psc_to_html</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">psc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">title</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">template</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">css</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">js</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.html.psc_to_html" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>台本オブジェクトから HTML を生成する</p>
+<dl class="field-list simple">
+<dt class="field-odd">パラメータ</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>psc</strong> (<a class="reference internal" href="playscript.html#playscript.psc.PSc" title="playscript.psc.PSc"><em>PSc</em></a>) -- ソースとなる台本オブジェクト</p></li>
+<li><p><strong>title</strong> (<em>str</em>) -- HTML のタイトル</p></li>
+<li><p><strong>template</strong> (<em>str</em>) -- HTML テンプレート</p></li>
+<li><p><strong>css</strong> (<em>str</em>) -- スタイルシート部分の HTML</p></li>
+<li><p><strong>js</strong> (<em>str</em>) -- JavaScript 部分の HTML</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="playscript.conv.html.template_dir">
+<code class="sig-prename descclassname"><span class="pre">playscript.conv.html.</span></code><code class="sig-name descname"><span class="pre">template_dir</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#playscript.conv.html.template_dir" title="この定義へのパーマリンク">¶</a></dt>
+<dd><p>テンプレートのディレクトリを取得する</p>
 </dd></dl>
 
 </div>
@@ -433,7 +496,7 @@
 
   <div role="contentinfo">
     <p>
-        &#169; Copyright 2021, satamame.
+        &#169; Copyright 2021-2022, satamame.
 
     </p>
   </div>
@@ -466,6 +529,7 @@
       <dd><a href="../0.2.2/playscript.conv.html">0.2.2</a></dd>
       <dd><a href="../0.2.3/playscript.conv.html">0.2.3</a></dd>
       <dd><a href="../0.2.4/playscript.conv.html">0.2.4</a></dd>
+      <dd><a href="../0.2.5/playscript.conv.html">0.2.5</a></dd>
     </dl>
     <dl>
       <dt>Branches</dt>
