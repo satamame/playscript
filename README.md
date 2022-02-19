@@ -86,7 +86,7 @@ fountain_str = textwrap.dedent('''\
 
     @六郎
     どうする？
-    
+
     @七郎
     帰って寝る
 
@@ -108,4 +108,17 @@ pdf_stream = pdf.psc_to_pdf(script)
 
 with open('out.pdf', 'wb') as f:
     f.write(pdf_stream.read())
+```
+
+### Fountain (日本式) を読み込んで HTML にする
+
+```python
+from playscript.conv import fountain, html
+
+with open('example.fountain', encoding='utf-8-sig') as f:
+    script = fountain.psc_from_fountain(f.read())
+
+html_str = html.psc_to_html(script)
+with open('out.html', 'w', encoding='utf-8') as f:
+    f.write(html_str)
 ```
