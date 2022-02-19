@@ -18,11 +18,11 @@ sys.path.insert(0, os.path.abspath('../../src'))
 # -- Project information -----------------------------------------------------
 
 project = 'playscript'
-copyright = '2021, satamame'
+copyright = '2021-2022, satamame'
 author = 'satamame'
 
 # The full version, including alpha/beta/rc tags
-release = '0.2.4'
+release = '0.2.5'
 
 
 # -- General configuration ---------------------------------------------------
@@ -73,7 +73,7 @@ autoclass_content = 'init'
 
 # -- Options for sphinx-multiversion -----------------------------------------
 
-smv_tag_whitelist = r'^0.2.[234]$|^\d+\.\d+$'
+smv_tag_whitelist = r'^0.2.[2345]$|^\d+\.\d+$'
 smv_branch_whitelist = r'^master$'
 
 

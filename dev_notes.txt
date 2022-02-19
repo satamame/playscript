@@ -28,9 +28,12 @@ docstring から rst を生成 (maxdepth=1)
 コミットしてタグをつけること
 
 rst から html を生成
-(.venv) > sphinx-build -b html docs/source docs/build
+まず、conf.py でバージョンを設定しなおす。
+
 マルチバージョンの場合 (タグつきのコミットから生成)
 (.venv) > sphinx-multiversion docs/source docs/build
+単品の場合
+(.venv) > sphinx-build -b html docs/source docs/build
 
 "docs/build" 以下を "playscript_pages" へコピー。
 gh-pages ブランチへプッシュ。
