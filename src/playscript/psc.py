@@ -52,12 +52,14 @@ class PScLine:
             raise TypeError(
                 "Argument 'line_type' should be a PScLineType member.")
 
+        # 登場人物行またはセリフ行なら、name 属性が必須
         if self.type in (PScLineType.CHARACTER, PScLineType.DIALOGUE):
             if not name:
                 raise ValueError(
                     "Argument 'name' is required "
                     "for type CHARACTER or DIALOGUE.")
 
+        # 空行でも登場人物行でもなければ、text 属性が必須
         if self.type not in (PScLineType.EMPTY, PScLineType.CHARACTER):
             if not text:
                 raise ValueError(

@@ -6,7 +6,8 @@ from reportlab.lib.units import cm
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 from reportlab.pdfgen import canvas
-from playscript import PScLineType
+
+from .. import PScLineType
 
 _Size = namedtuple('Size', 'w h')
 

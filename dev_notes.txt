@@ -11,7 +11,7 @@ single test w/o build:
 
 cross-version test:
 > del .tox
-> tox
+> py -m tox
 
 upload to TestPyPI:
 > twine upload --repository testpypi dist/*
@@ -32,6 +32,5 @@ rst から html を生成
 マルチバージョンの場合 (タグつきのコミットから生成)
 (.venv) > sphinx-multiversion docs/source docs/build
 
-"docs/build" 以下を gh-pages ブランチのルートへ
-
-※結局、「コピー → ブランチ切り替え → コピー」が楽だった。
+"docs/build" 以下を "playscript_pages" へコピー。
+gh-pages ブランチへプッシュ。
