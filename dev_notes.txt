@@ -14,12 +14,12 @@ cross-version test:
 > py -m tox
 
 upload to TestPyPI:
-> twine upload --repository testpypi dist/*
+> py -m twine upload --repository testpypi dist/*
 
 upload to PyPI:
-> twine upload --repository pypi dist/*
+> py -m twine upload --repository pypi dist/*
 
-※PyPI にアップロードする時は、setup.cfg の install_requires から、fountain を削除する。
+※PyPI にアップロードする時は、setup.cfg の install_requires から、fountain を削除して build する。
 ※GitHub に上げる時に元に戻す。
 
 docstring から rst を生成 (maxdepth=1)

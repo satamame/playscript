@@ -12,6 +12,14 @@ playscript.conv.fountain module
    :undoc-members:
    :show-inheritance:
 
+playscript.conv.html module
+---------------------------
+
+.. automodule:: playscript.conv.html
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 playscript.conv.json module
 ---------------------------
 
