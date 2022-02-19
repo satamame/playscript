@@ -22,7 +22,7 @@ copyright = '2021-2022, satamame'
 author = 'satamame'
 
 # The full version, including alpha/beta/rc tags
-release = '0.2.5'
+release = '0.2.6'
 
 
 # -- General configuration ---------------------------------------------------
@@ -73,7 +73,7 @@ autoclass_content = 'init'
 
 # -- Options for sphinx-multiversion -----------------------------------------
 
-smv_tag_whitelist = r'^0.2.[2345]$|^\d+\.\d+$'
+smv_tag_whitelist = r'^0.2.[346]$|^\d+\.\d+$'
 smv_branch_whitelist = r'^master$'
 
 

@@ -29,7 +29,7 @@ docstring から rst を生成 (maxdepth=1)
 
 rst から html を生成
 まず、conf.py でバージョンを設定しなおす。
-
+↓
 マルチバージョンの場合 (タグつきのコミットから生成)
 (.venv) > sphinx-multiversion docs/source docs/build
 単品の場合
