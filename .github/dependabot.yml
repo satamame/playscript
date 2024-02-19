@@ -6,6 +6,6 @@
 version: 2
 updates:
   - package-ecosystem: "pip"
-    directory: "/" # Location of package manifests
+    directory: "/requirements_dev.txt"
     schedule:
       interval: "weekly"

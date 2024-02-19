@@ -1,3 +1,6 @@
+requirements_dev.txt は、.venv に入った時に必要な依存関係。
+requirements_tox.txt は、tox を使ったテストで参照される。
+
 build:
 > py -m build .
 

@@ -1,6 +1,0 @@
-# dependabot が依存性を検証するために必要
-# これを setup.py で読み込まなくて良い
-# パッケージ自体の依存性は setup.cfg に記載する
--r requirements_dev.txt
-# setup.cfg に記載されていて requirements_dev.txt に無いパッケージ
-fountain @ git+git://github.com/Tagirijus/fountain.git@7da5447abae640f34448dd36fee83f47a7415fcf
