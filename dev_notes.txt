@@ -3,9 +3,9 @@ requirements_dev.txt は、.venv に入った時に必要な依存関係。
 requirements_tox.txt は、tox を使ったテストで参照される。
 
 build:
-> py -m build .
-
 ※グローバル環境に build がインストールされていること。
+※必要なら setup.cfg のバージョンを変える。
+> py -m build .
 
 single test:
 (.venv) > pip install .
@@ -16,10 +16,9 @@ single test w/o build:
 (.venv) > py -m unittest -v {tests.test_module_name{.class_name{.method_name}}}
 
 cross-version test:
+※グローバル環境に tox がインストールされていること。
 > del .tox
 > py -m tox
-
-※グローバル環境に tox がインストールされていること。
 
 upload to TestPyPI:
 > py -m twine upload --repository testpypi dist/*
