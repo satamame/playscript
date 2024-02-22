@@ -20,14 +20,15 @@ cross-version test:
 > del .tox
 > py -m tox
 
+※TestPyPI/PyPI にアップロードする時は、setup.cfg の install_requires から、fountain を削除して build する。
+※GitHub に上げる時に元に戻す。
+※twine で以下のコマンドでアップロードする場合、ユーザディレクトリに .pypirc が必要。
+
 upload to TestPyPI:
 > py -m twine upload --repository testpypi dist/*
 
 upload to PyPI:
 > py -m twine upload --repository pypi dist/*
-
-※PyPI にアップロードする時は、setup.cfg の install_requires から、fountain を削除して build する。
-※GitHub に上げる時に元に戻す。
 
 docstring から rst を生成 (maxdepth=1)
 (.venv) > sphinx-apidoc -f -o docs/source src -d 1
