@@ -6,6 +6,7 @@
 version: 2
 updates:
   - package-ecosystem: "pip"
-    directory: "/requirements_dev.txt"
+    directory: "/"
     schedule:
       interval: "weekly"
+    target-branch: "develop"
