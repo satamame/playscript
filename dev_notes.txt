@@ -1,4 +1,8 @@
-requirements_dev.txt は、.venv に入った時に必要な依存関係。
+VSCode の設定
+"python.defaultInterpreterPath": ".venv\\Scripts\\python.exe"
+
+テスト実行時、ドキュメント生成時などは .venv に入ること。
+.venv には requirements_dev.txt で依存関係をインストールする。
 (パッケージ自体の依存関係は setup.cfg に記載している。)
 requirements_tox.txt は、tox を使ったテストで参照される。
 
@@ -9,11 +13,11 @@ build:
 
 single test:
 (.venv) > pip install .
-(.venv) > py -m unittest -v {tests.test_module_name{.class_name{.method_name}}}
+(.venv) > python -m unittest -v {tests.test_module_name{.class_name{.method_name}}}
 
-single test w/o build:
+single test w/o build (テストコードをデバッグ実行する時など):
 (.venv) > pip install -e .
-(.venv) > py -m unittest -v {tests.test_module_name{.class_name{.method_name}}}
+(.venv) > python -m unittest -v {tests.test_module_name{.class_name{.method_name}}}
 
 cross-version test:
 ※グローバル環境に tox がインストールされていること。
@@ -21,7 +25,7 @@ cross-version test:
 > py -m tox
 
 ※TestPyPI/PyPI にアップロードする時は、setup.cfg の install_requires から、fountain を削除して build する。
-※GitHub に上げる時に元に戻す。
+※GitHub に上げる時に setup.cfg を元に戻す。
 ※twine で以下のコマンドでアップロードする場合、ユーザディレクトリに .pypirc が必要。
 
 upload to TestPyPI:
