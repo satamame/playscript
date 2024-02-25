@@ -34,13 +34,23 @@ upload to TestPyPI:
 upload to PyPI:
 > py -m twine upload --repository pypi dist/*
 
+※GitHub 上でリリースする前に、そのバージョンのドキュメントを作る必要がある。
+(実際のバージョン名とドキュメントに表示するバージョン名を合わせるため。)
+※或は、「ドキュメントに表示するのはマイナーバージョンまで」等として後から作れるようにしても良い。
+
 docstring から rst を生成 (maxdepth=1)
 (.venv) > sphinx-apidoc -f -o docs/source src -d 1
 ↓
+以下の .rst ファイルが出来る (上書きされる)
+- modules.rst
+- playscript.rst
+- playscript.conv.rst
+↓
 コミットしてタグをつけること
 
-rst から html を生成
+markdown/rst から html を生成
 まず、conf.py でバージョンを設定しなおす。
+必要なら smv_tag_whitelist も。
 ↓
 マルチバージョンの場合 (タグつきのコミットから生成)
 (.venv) > sphinx-multiversion docs/source docs/build
