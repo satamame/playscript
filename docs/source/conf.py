@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.abspath('../../src'))
 # -- Project information -----------------------------------------------------
 
 project = 'playscript'
-copyright = '2021-2022, satamame'
+copyright = '2021-2024, satamame'
 author = 'satamame'
 
 # The full version, including alpha/beta/rc tags
@@ -29,10 +29,16 @@ release = '0.2.6'
 
 language = 'ja'
 
+source_suffix = {
+    '.md': 'markdown',
+    '.rst': 'restructuredtext',
+}
+
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'myst_parser',
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx_rtd_theme',
@@ -73,9 +79,9 @@ autoclass_content = 'init'
 
 # -- Options for sphinx-multiversion -----------------------------------------
 
-smv_tag_whitelist = r'^0.2.[346]$|^\d+\.\d+$'
+smv_tag_whitelist = r'^\d+\.\d+$'
 smv_branch_whitelist = r'^master$'
 
 
 def setup(app):
-    app.add_stylesheet('css/custom.css')  # may also be an URL
+    app.add_css_file('css/custom.css')  # may also be an URL
