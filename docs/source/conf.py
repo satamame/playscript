@@ -79,7 +79,7 @@ autoclass_content = 'init'
 
 # -- Options for sphinx-multiversion -----------------------------------------
 
-smv_tag_whitelist = r'^0.2.[346]$|^\d+\.\d+$'
+smv_tag_whitelist = r'^\d+\.\d+$'
 smv_branch_whitelist = r'^master$'
 
 
