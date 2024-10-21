@@ -22,7 +22,7 @@ copyright = '2021-2024, satamame'
 author = 'satamame'
 
 # The full version, including alpha/beta/rc tags
-release = '0.2.6'
+release = '0.2.8'
 
 
 # -- General configuration ---------------------------------------------------
